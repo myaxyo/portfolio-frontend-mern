@@ -15,7 +15,7 @@ const Portfolio = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>Sorry, We have problem with server.</div>;
   }
 
   return (
