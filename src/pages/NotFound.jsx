@@ -1,24 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const NotFound = () => {
-  console.log(window.location.href);
+  const [path, setPath] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  if (location.pathname.endsWith("/admin")) {
-    navigate("/login");
-  }
+  const { pathname } = location;
+
+  useEffect(() => {
+    if (pathname === `/${import.meta.env.VITE_ADMIN_PATH}`) {
+      setPath(!path);
+    }
+  }, []);
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="pb-3 text-2xl">Sorry, the page is not found.</h1>
-        <a
-          href="/"
-          className="py-3 rounded cursor-pointer px-6 bg-green-400 text-white"
-        >
-          Back home
-        </a>
+        <h1 className="pb-3 text-2xl">
+          {path && !path
+            ? "Sorry, the page is not found."
+            : "Please login first."}
+        </h1>
+        {path && !path ? (
+          <a
+            href="/"
+            className="py-3 rounded cursor-pointer px-6 bg-green-400 text-white"
+          >
+            Back home
+          </a>
+        ) : (
+          <a
+            href="/login"
+            className="py-3 rounded cursor-pointer px-6 bg-green-400 text-white"
+          >
+            Login
+          </a>
+        )}
       </div>
     </div>
   );
