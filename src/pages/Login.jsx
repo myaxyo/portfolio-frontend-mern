@@ -88,7 +88,7 @@ const Login = () => {
             }}
           >
             <Button
-              type="success"
+              // type="success"
               htmlType="submit"
               className="bg-green-500 text-white"
             >

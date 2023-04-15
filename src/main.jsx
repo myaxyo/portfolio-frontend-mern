@@ -11,18 +11,18 @@ import { StyleProvider } from "@ant-design/cssinjs";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <BrowserRouter>
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: "#000000",
-          },
-        }}
-      >
-        <StyleProvider hashPriority="high">
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: "#000000",
+        },
+      }}
+    >
+      <StyleProvider hashPriority="high">
+        <BrowserRouter>
           <App />
-        </StyleProvider>
-      </ConfigProvider>
-    </BrowserRouter>
+        </BrowserRouter>
+      </StyleProvider>
+    </ConfigProvider>
   </Provider>
 );
