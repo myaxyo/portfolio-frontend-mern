@@ -11,7 +11,9 @@ const NotFound = () => {
       setPath(!path);
     }
   }, []);
-
+  useEffect(() => {
+    document.title = "Not Found";
+  }, []);
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center">

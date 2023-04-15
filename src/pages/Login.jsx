@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../store/authSlice";
 import { Button, Checkbox, Form, Input } from "antd";
 
 const Login = () => {
-  const { isLoggedIn } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(isLoggedIn);
   const onFinish = (values) => {
     if (
       values.username === import.meta.env.VITE_USERNAME &&
@@ -18,6 +16,9 @@ const Login = () => {
       navigate("/admin");
     }
   };
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };

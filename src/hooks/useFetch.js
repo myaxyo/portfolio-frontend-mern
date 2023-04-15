@@ -19,8 +19,16 @@ function useFetch(url, headers) {
     };
     fetchData();
   }, []);
+  const deleteData = async (id) => {
+    try {
+      await axios.delete(`${url}/${id}`, { headers });
+      setData(data.filter((item) => item.id !== id));
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
-  return { data, loading, error };
+  return { data, loading, error, deleteData };
 }
 
 export default useFetch;
