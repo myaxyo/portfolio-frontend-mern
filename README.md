@@ -1,37 +1,36 @@
-My Frontend App
-This is the frontend application for my project.
+# Project Name
 
-Installation
-To install this app, run the following commands:
+Description of the project
 
-bash
-Copy code
-git clone https://github.com/myusername/my-frontend-app.git
-cd my-frontend-app
-npm install
-Usage
-To start the app, run the following command:
+## Getting Started
 
-bash
-Copy code
-npm start
-This will start the app on port 3000.
+### Prerequisites
 
-Technologies Used
-This app was built using the following technologies:
+* Node.js
+* npm
 
-React
-Redux
-React Router
-Axios
-AntDesign (Admin Panel)
-TailwindCSS
+### Installing
 
-Contributing
-If you would like to contribute to this project, please follow these steps:
+1. Clone the repository
+2. Install dependencies with `npm install`
 
-Fork the repo
-Create a new branch (git checkout -b feature/your-feature)
-Make changes and commit (git commit -am 'Add some feature')
-Push to the branch (git push origin feature/your-feature)
-Create a new Pull Request
+### Running the App
+
+1. Start the development server with `npm run dev`
+2. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+1. Run `npm run build`
+2. Deploy the `dist` directory to your production server
+
+## Built With
+
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces
+* [Vite](https://vitejs.dev/) - Vite
+* [React Router](https://reactrouter.com/) - Declarative routing for React
+
+## Authors
+
+* [Author Name](https://github.com/myaxyo) - Initial work
+
