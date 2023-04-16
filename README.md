@@ -1,4 +1,4 @@
-# Project Name
+# Portfolio - MERN
 
 Description of the project
 
