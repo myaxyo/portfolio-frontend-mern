@@ -2,6 +2,8 @@
 
 Description of the project
 
+* [Backend](https://github.com/myaxyo/portfolio-backend-mern) - You can find backend part here
+
 ## Getting Started
 
 ### Prerequisites
