@@ -32,5 +32,5 @@ Description of the project
 
 ## Authors
 
-* [Author Name](https://github.com/myaxyo) - Initial work
+* [Muhammadjon Yakhyoev](https://github.com/myaxyo) - Initial work
 
